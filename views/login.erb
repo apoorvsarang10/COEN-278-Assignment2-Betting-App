@@ -1,0 +1,18 @@
+<html>
+<body>
+
+<h4><%= @header %></h4>
+
+<form>
+    <label for="user" style="font-size:14pt;">User:</label>
+    <input type='text' name='username'style="font-size:14pt;"></input>
+    <br>
+    <br>
+    <label for="pass" style="font-size:14pt;">Password:</label>
+    <input type='text' name='password' style="font-size:14pt;"></input>
+    <br>
+    <button type='submit' name='login' formaction="/login" style="margin:20px;">Login</button>
+    <button type='submit' name='signup' formaction="/signup" style="margin:5px;">Sign Up</button>
+</form>
+</body>
+</html>

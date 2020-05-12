@@ -1,0 +1,7 @@
+
+<% if @failed == 1 %>
+    <h4>Please enter User ID and Password to logon.</h4>
+<% else %>
+    <h4>User not found. Please enter correct User ID and Password.</h4>
+<% end %>
+<%= erb :login %>

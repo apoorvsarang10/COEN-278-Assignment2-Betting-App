@@ -1,0 +1,23 @@
+<html>
+<body>
+<br>
+
+    <h5>Account:</h5>
+    <div class="container">  
+        <form class="box" action="/confirm" method='post'>
+        
+            <label for="acc_win">Total win:</label>
+            <input type='text' name='acc_win' value = '<%= settings.acc_win %>' disabled></input>
+            <br><br>
+            <label for="acc_loss">Total loss:</label>
+            <input type='text' name='acc_loss' value = '<%= settings.acc_loss %>' disabled></input>
+            <br><br>
+            <label for="acc_profit">Total profit:</label>
+            <input type='text' name='acc_profit' value = '<%= settings.acc_win - settings.acc_loss %>' disabled></input><br>
+            <button type='submit' name='logout'>Logout</button>
+            <br>
+            
+        </form>
+    </div>
+</body>
+</html>

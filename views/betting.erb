@@ -1,0 +1,34 @@
+<html>
+<body>
+<div class="row">
+  <div class="column1">
+    <form action="/bet" method='post'>
+    <label for="bet_money">Bet money:</label>
+    <input type='text' name='bet_money'></input>
+    <br>
+    <label for="dice">On:</label>
+    <input type='text' name='dice'></input>
+    <br>
+    <button type='submit' name='bet'>Bet</button>
+    </form>
+  </div>
+  
+  <div class="column2 container">
+  <div class="box">
+    <form>
+    <label for="current_win">Total win:</label>
+    <input type='text' name='current_win' value = '<%= settings.curr_win %>' disabled></input>
+    <br><br>
+    <label for="current_loss">Total loss:</label>
+    <input type='text' name='current_loss' value = '<%= settings.curr_loss %>' disabled></input>
+    <br><br>
+    <label for="current_profit">Total profit:</label>
+    <input type='text' name='current_profit' value = '<%= settings.curr_win - settings.curr_loss %>' disabled></input>
+    <br>
+ </form>
+  </div>
+  </div>
+    
+</div>
+</body>
+</html>
