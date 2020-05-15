@@ -1,23 +1,29 @@
 <html>
 <body>
 <br>
+<br>
+<br>
 
-    <h5>Account:</h5>
-    <div class="container">  
-        <form class="box" action="/confirm" method='post'>
+    <h4>Account:</h4>
+    <div class="container3">  
+        <form id="myform" class="box2" action="/confirm" method='post'>
         
-            <label for="acc_win">Total win:</label>
-            <input type='text' name='acc_win' value = '<%= settings.acc_win %>' disabled></input>
+            <b class="text">Total win</b>
+            <b>:</b>
+            <i><%= session[:acc_win] %></i>
             <br><br>
-            <label for="acc_loss">Total loss:</label>
-            <input type='text' name='acc_loss' value = '<%= settings.acc_loss %>' disabled></input>
+            <b class="text">Total loss</b>
+            <b>:</b>
+            <i><%= session[:acc_loss] %></i>
             <br><br>
-            <label for="acc_profit">Total profit:</label>
-            <input type='text' name='acc_profit' value = '<%= settings.acc_win - settings.acc_loss %>' disabled></input><br>
-            <button type='submit' name='logout'>Logout</button>
-            <br>
+            <b class="text">Total profit</b>
+            <b>:</b>
+            <i><%= session[:acc_win] - session[:acc_loss] %></i>
+            
             
         </form>
+        
     </div>
+    <button type='submit' name='logout' form="myform">Logout</button>
 </body>
 </html>

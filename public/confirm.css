@@ -1,22 +1,11 @@
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
-/* Full-width input fields */
-input[type=submit]{
-  width: auto%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-
 /* Set a style for all buttons */
 button {
   background-color: #4CAF50;
   color: white;
-  padding: 14px 20px;
+  padding: 10px 10px 10px 36px;;
   margin: 8px 0;
   border: none;
   outline: none;
@@ -26,8 +15,29 @@ button {
   box-shadow: 0 5px #999;
 }
 
+button[name='logout'], [name='save']{
+  background: #f4511e url(/images/logout2.png) 10px 7px no-repeat;
+}
+
+button[name='bet']{
+  background: #4CAF50 url(/images/chips3.png) 10px 7px no-repeat;
+}
+
+button[name='login']{
+  background: #4CAF50 url(/images/login2.png) 10px 9px no-repeat;
+}
+
+button[name='signup']{
+  background: #3269fa url(/images/signup.png) 10px 9px no-repeat;
+}
+
+button[name='cancel']{
+  background: #4CAF50 url(/images/back.png) 10px 10px no-repeat;
+}
+
 button[name='logout']{
-  background-color: #f4511e;
+  display: block;
+  margin: 10px auto 0px auto;
 }
 
 button:hover {opacity: 0.9}
@@ -37,7 +47,10 @@ button:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
+.disabled {
+    background-color:#dddcd9;
+    border: none;
+}
 /* Extra styles for the cancel button */
 .cancelbtn {
   width: auto;
@@ -92,5 +105,17 @@ button:active {
 @media screen and (max-width: 300px) {
   .cancelbtn {
      width: 100%;
+  }
+}
+.opacity {
+opacity: 0;
+animation: mymove 1s;
+animation-delay: 1.5s;
+animation-fill-mode: forwards;
+}
+
+@keyframes mymove {
+100% {
+    opacity: 1;
   }
 }

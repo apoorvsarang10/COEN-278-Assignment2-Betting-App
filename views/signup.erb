@@ -9,14 +9,14 @@
     <br>
     <br>
     <label for="password" style="font-size:14pt;">Password:</label>
-    <input type='text' name='password' style="font-size:14pt;"></input>
+    <input type='password' name='password' style="font-size:14pt;"></input>
     <br>
     <br>
     <label for="fullname" style="font-size:14pt;">Your Name:</label>
     <input type='text' name='fullname' style="font-size:14pt;"></input>
     <br>
-    <button type='submit' name='login' formaction="/" style="margin:20px;">Cancel</button>
-    <button type='submit' name='signup' formaction="/adduser" style="margin:5px;">Sign Up</button>
+    <button type='submit' name='cancel' formmethod="post" formaction="/" style="margin:20px;">Cancel</button>
+    <button type='submit' name='signup' formaction="/adduser" formmethod="post" style="margin:5px;">Sign Up</button>
 </form>
 </body>
 </html>

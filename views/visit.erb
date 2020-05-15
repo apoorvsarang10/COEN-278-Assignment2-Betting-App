@@ -1,13 +1,15 @@
 <html>
 <body>
-<% if settings.acc_win > 0 or settings.acc_loss  > 0 %>
-    <h2>Welcome back, <%= settings.name %>!</h2>
+<% if session[:acc_win] > 0 or session[:acc_loss]  > 0 %>
+    <h2>Welcome back, <%= session[:name] %> !</h2>
 <% else %>
-     <h2>Welcome <%= settings.name %>!</h2>
+     <h2>Welcome <%= session[:name] %>!</h2>
 <% end %>
-<h4><%= @message %></h4>
+<h4 class="<%= @vanish %>"><%= @message %></h4>
 <%= erb :betting %>
 <%= erb :account %>
+   
+    
 <!--<form action="/login" method='post'>
     <label for="user">User:</label>
     <input type='text' name='username'></input>

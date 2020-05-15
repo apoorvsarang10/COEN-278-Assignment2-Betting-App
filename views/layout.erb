@@ -2,10 +2,35 @@
   <head>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="/confirm.css" rel="stylesheet" type="text/css">
+    <link href="/die.css" rel="stylesheet" type="text/css">
       </head>
 <body>
-  <h1> Gambling Site </h1>
 
-<%= yield %>
+    <div class="bodyrow">
+        <div class="column left"">
+            <img src="/images/CHIPS1.png" style = "width: 90%; height:90%"></img>
+        </div>
+        <div class="column middle">
+            <div class="row" style="width: 100%;">
+            <div style=" width: 30%; float: left; text-align: right;">
+                <img src="/images/dice2.png" style="height: 90px; padding-right: 0px;"/>
+            </div>
+            <div style=" width: 40%; float: left; text-align: left;">
+                <h1> <b class="gradient">Casino Sinatra</b> </h1> 
+            </div>
+            <div style=" width: 30%; float: right; text-align: left;">
+                <img src="/images/dice2.png" style="height: 90px; padding-right: 0px; transform: scaleX(-1)"/>
+            </div>
+            </div>
+            <%= yield %>
+        </div>
+        <div class="column right">
+            <img src="/images/CHIPS1.png" style = "width: 90%; height:90%; transform: scaleX(-1);"></img>
+        </div>
+    </div>
+    
+  
+
+
 </body>
 </html>
