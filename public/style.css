@@ -120,11 +120,11 @@ div.box2{
 }
 
 #smallscreen {
-    display: none;
+    display: block;
   }
 
-@media screen and (max-width: 300px) {
+@media screen and (min-width: 600px) {
 #smallscreen  {
-    display: block;
+    display: none;
   }
 }
