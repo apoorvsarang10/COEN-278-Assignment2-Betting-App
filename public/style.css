@@ -118,3 +118,13 @@ div.box2{
     display: table;
     clear: both;
 }
+
+#smallscreen {
+    display: none;
+  }
+
+@media screen and (max-width: 600px) {
+#smallscreen  {
+    display: block;
+  }
+}
