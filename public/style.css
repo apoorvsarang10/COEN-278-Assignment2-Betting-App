@@ -107,14 +107,16 @@ div.box2{
     /* Set width length for the left, right and middle columns */
 .left {
     width: 15%;
+    display:none;
 }
 
 .middle {
-    width: 70%;
+    width: 100%;
 }
     
 .right {
     width: 15%;
+    display: none;
 }
 
 .bodyrow:after {
@@ -130,7 +132,11 @@ div.box2{
 #bigscreen {
     display: none;
   }
-  
+
+#maingif {
+    width:inherit;
+}
+
 @media only screen and (min-width: 600px) {
 #smallscreen  {
     display: none;
@@ -174,4 +180,24 @@ div.container3 {
   margin: auto;
   padding: 16px;
 }
+
+.left {
+    width: 15%;
+    display: block;
+    
+}
+
+.middle {
+    width: 70%;
+}
+    
+.right {
+    width: 15%;
+    display: block;
+}
+
+#maingif {
+    width:auto;
+}
+
 }
