@@ -189,7 +189,7 @@ get '/betting' do
                 @roll = "roll0"
                 @message = "Don't be a miser! Put some real money! <br><br>"
 
-            elsif dice <= 0 or dice >= 6
+            elsif dice <= 0 or dice > 6
 
                 @roll = "roll0"
                 @message = "Did you really think that number would come up on a die? Seriously? <br><br>"
