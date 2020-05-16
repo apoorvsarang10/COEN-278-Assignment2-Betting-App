@@ -21,6 +21,7 @@ b.gradient {
     background: -webkit-linear-gradient(blue, red 65%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: smaller;
 }
 
 h2 {
@@ -36,7 +37,7 @@ form {
 }
 
 label.bet {
-    width:300px;
+    width:auto;
     display: inline-block;
 }
 
@@ -72,20 +73,23 @@ div.box{
 }
 .column1 {
   float: left;
-  width: 50%;
+  width: -webkit-fill-available;
   padding: 10px;
   text-align: center;
 }
 .column2 {
-  width: 35%;
+  width: -webkit-fill-available;
   float: left;
-  width: 35%;
   padding: 10px;
+}
+
+.dicewidth {
+  width: -webkit-fill-available;
 }
 
 div.container3 {
   border: 1px solid white;
-  width: 50%;
+  width: -webkit-fill-available;
   margin: auto;
   padding: 16px;
 }
@@ -123,8 +127,51 @@ div.box2{
     display: block;
   }
 
+#bigscreen {
+    display: none;
+  }
+  
 @media only screen and (min-width: 600px) {
 #smallscreen  {
     display: none;
   }
+
+#bigscreen {
+    display: block;
+  }
+  
+label.bet {
+    width:auto;
+    display: inline-block;
+}
+
+b.gradient {
+    background: -webkit-linear-gradient(blue, red 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: inherit;
+}
+
+.column1 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+.column2 {
+  width: 35%;
+  float: left;
+  width: 35%;
+  padding: 10px;
+}
+
+.dicewidth {
+    width: auto;
+}
+div.container3 {
+  border: 1px solid white;
+  width: 50%;
+  margin: auto;
+  padding: 16px;
+}
 }

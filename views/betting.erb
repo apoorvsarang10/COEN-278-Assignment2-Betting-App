@@ -1,5 +1,6 @@
 <html>
 <body>
+<div id="bigscreen">
 <div class="row" style="height: fit-content;">
   <div class="column1">
     <form action="/bet" method='post'>
@@ -72,6 +73,90 @@
   </div>
   </div>
     
+</div>
+</div>
+<div id="smallscreen">
+<div class="row" style="height: fit-content;">
+  <div class="column1">
+    <form action="/bet" method='post'>
+        <label class="bet" for="bet_money">How many chips you want to bet?</label><br>
+        <input type='text' name='bet_money'></input>
+        <br><br>
+        <label class="bet" for="dice">Which number you want to bet on?</label><br>
+        <input type='text' name='dice'></input>
+        <br>
+        <button type='submit' name='bet' value="1">
+            Bet
+        </button>
+    </form>
+</div>
+</div>
+<div class="row" style="height: fit-content;">
+<div class="column1">
+    <br>
+    <div id="view">
+        <div id="dice" class= "<%= @roll %>"  >
+            <div class="diceFace" id="front" data-side="2">
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="diceFace" id="right" data-side="3">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="diceFace" id="back" data-side="5">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="diceFace" id="left" data-side="4">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="diceFace" id="top" data-side="1">
+                <span class="dot"></span>
+            </div>
+            <div class="diceFace" id="bottom" data-side="6">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<div class="row" style="height: fit-content;">
+  <div class="column2 container">
+  <div class="box">
+    <form>
+    <b>Total win:</b>
+    <br><br>
+    <i class="<%= @vanish %>"><%= session[:curr_win] %></i>
+    <br><br>
+    <b>Total loss:</b>
+    <br><br>
+    <i class="<%= @vanish %>" ><%= session[:curr_loss] %></i>
+    <br><br>
+    <b>Total profit:</b>
+    <br><br>
+    <i class="<%= @vanish %>"><%= session[:curr_win] - session[:curr_loss] %></i>
+    <br>
+ </form>
+  </div>
+  </div>
+    
+</div>
 </div>
 </body>
 </html>
